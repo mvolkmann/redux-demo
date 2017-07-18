@@ -3,16 +3,14 @@ body {
 
 .counter {
   font-family: sans-serif; }
-
-.counter .button-row {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  width: 70px; }
-
-.counter .button-row button {
-  border: none;
-  border-radius: 9px;
-  height: 18px;
-  width: 18px; }
+  .counter .button-row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 70px; }
+    .counter .button-row button {
+      border: none;
+      border-radius: 9px;
+      height: 18px;
+      width: 18px; }
