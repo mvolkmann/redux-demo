@@ -57,6 +57,6 @@ describe('Counter', () => {
     btn.simulate('click');
 
     const actions = store.getActions();
-    expect(actions[0]).toEqual({type: 'incrementWrong'});
+    expect(actions[0]).toEqual({type: 'increment'});
   });
 });
