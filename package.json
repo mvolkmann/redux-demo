@@ -36,7 +36,8 @@
     "react-start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "test-no-watch": "cross-env CI=true npm test -- --verbose",
-    "verify": "npm-run-all lint flow format cover",
+    "verify-save": "npm-run-all lint flow format cover",
+    "verify": "npm-run-all lint flow format",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch"
   },
   "devDependencies": {
