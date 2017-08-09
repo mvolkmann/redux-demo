@@ -27,8 +27,7 @@
   "plugins": [
     "flowtype",
     "html",
-    "react",
-    "volkmann"
+    "react"
   ],
 
   "rules": {
@@ -394,8 +393,6 @@
     "wrap-iife": "error",
     "wrap-regex": "off",
     "yield-star-spacing": ["error", "after"],
-    "yoda": "off",
-    "volkmann/embrace-booleans": "error",
-    "volkmann/exponentiation-operator": ["error"]
+    "yoda": "off"
   }
 }
