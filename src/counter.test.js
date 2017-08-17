@@ -34,7 +34,7 @@ describe('Counter', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test.skip('should decrement', () => {
+  test('should decrement', () => {
     const wrapper = mount(
       <Provider store={store}>
         <Counter />
