@@ -24,11 +24,7 @@
     }
   },
 
-  "plugins": [
-    "flowtype",
-    "html",
-    "react"
-  ],
+  "plugins": ["flowtype", "html", "react"],
 
   "rules": {
     "accessor-pairs": "error",
@@ -90,37 +86,6 @@
     "id-blacklist": ["error"],
     "id-length": "off",
     "id-match": "off",
-    /*
-    "import/default": "error",
-    "import/export": "error",
-    "import/extensions": [".js", ".json"],
-    "import/first": "error",
-    "import/imports-first": "error",
-    "import/max-dependencies": "error",
-    "import/named": "error",
-    "import/namespace": "error",
-    "import/newline-after-import": "error",
-    "import/no-absolute-path": "error",
-    "import/no-amd": "error",
-    "import/no-commonjs": "error",
-    "import/no-deprecated": "error",
-    "import/no-duplicates": "error",
-    "import/no-dynamic-require": "error",
-    "import/no-extraneous-dependencies": "error",
-    "import/no-internal-modules": "error",
-    "import/no-mutable-exports": "error",
-    "import/no-named-as-default": "error",
-    "import/no-named-as-default-member": "error",
-    "import/no-namespace": "error",
-    "import/no-nodejs-modules": "error",
-    "import/no-restricted-paths": "error",
-    "import/no-unassigned-import": "error",
-    "import/no-unresolved": "error",
-    "import/no-webpack-loader-syntax": "error",
-    "import/order": "error",
-    "import/prefer-default-export": "error",
-    "import/unambiguous": "error",
-    */
     "indent": ["error", 2, {"SwitchCase": 1}],
     "init-declarations": "off",
     "jsx-quotes": ["error", "prefer-double"],
@@ -136,7 +101,6 @@
     "max-nested-callbacks": ["error", 4],
     "max-params": "off",
     "max-statements": ["warn", 50],
-    "max-statements-per-line": "off", // doesn't work
     "multiline-ternary": "off",
     "new-cap": "off",
     "new-parens": "error",
@@ -292,7 +256,10 @@
     "prefer-destructuring": "error",
     "prefer-numeric-literals": "error",
     "prefer-promise-reject-errors": "off",
-    "prefer-reflect": ["warn", {"exceptions": ["apply", "call", "delete", "getOwnPropertyNames"]}],
+    "prefer-reflect": [
+      "warn",
+      {"exceptions": ["apply", "call", "delete", "getOwnPropertyNames"]}
+    ],
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "off",
@@ -309,7 +276,6 @@
     "react/jsx-curly-spacing": "error",
     "react/jsx-equals-spacing": "error",
     "react/jsx-filename-extension": "off",
-    //"react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
     "react/jsx-first-prop-new-line": "off",
     "react/jsx-handler-names": "off",
     "react/jsx-indent": ["error", 2],
@@ -324,12 +290,14 @@
     "react/jsx-no-undef": "error",
     "react/jsx-pascal-case": "error",
     "react/jsx-sort-props": "off",
-    "react/jsx-space-before-closing": ["warn", "always"],
-    "react/jsx-tag-spacing": ["error", {
-      "afterOpening": "never",
-      "beforeSelfClosing": "always",
-      "closingSlash": "never"
-    }],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "afterOpening": "never",
+        "beforeSelfClosing": "always",
+        "closingSlash": "never"
+      }
+    ],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/jsx-wrap-multilines": "off",
@@ -343,7 +311,7 @@
     "react/no-direct-mutation-state": "error",
     "react/no-find-dom-node": "error",
     "react/no-is-mounted": "error",
-    "react/no-multi-comp": "off", // thinks nested functions are components!
+    "react/no-multi-comp": "off",
     "react/no-render-return-value": "error",
     "react/no-set-state": "off",
     "react/no-string-refs": "off",
@@ -351,7 +319,6 @@
     "react/no-unknown-property": "error",
     "react/no-unused-prop-types": "error",
     "react/prefer-es6-class": "error",
-    //"react/prefer-stateless-function": "warn",
     "react/prefer-stateless-function": "off",
     "react/prop-types": "error",
     "react/react-in-jsx-scope": "error",
@@ -375,11 +342,13 @@
     "sort-keys": "off",
     "sort-vars": ["warn", {"ignoreCase": true}],
     "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": ["error", {"anonymous": "always", "named": "never"}],
+    "space-before-function-paren": [
+      "error",
+      {"anonymous": "always", "named": "never"}
+    ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": ["error"],
-    //"space-infix-ops": ["error", {"**": "never"}],
-    "space-unary-ops": ["error", { "words": true, "nonwords": false }],
+    "space-unary-ops": ["error", {"words": true, "nonwords": false}],
     "spaced-comment": "off",
     "strict": "off",
     "symbol-description": "error",
