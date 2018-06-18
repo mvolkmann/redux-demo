@@ -25,7 +25,7 @@ const functions = {
 
 function reducer(state: StateType, action: ActionType): StateType {
   const {payload, type} = action;
-  if (type === '@@redux/INIT') return initialState;
+  if (type.startsWith('@@redux/INIT')) return initialState;
 
   const fn = functions[type];
   if (!fn) {
