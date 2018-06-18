@@ -14,14 +14,18 @@ import reducer from './reducer';
 // It gets all its props from the store using
 // mapStateToProps at the bottom of counter.js.
 function render(): void {
-  ReactDOM.render(
-    <Provider store={store}>
-      <Counter />
-    </Provider>,
-    document.getElementById('root')
-  );
+  const root = document.getElementById('root');
+  if (root && store) {
+    ReactDOM.render(
+      <Provider store={store}>
+        <Counter />
+      </Provider>,
+      root
+    );
+  }
 }
 
+// $FlowFixMe - reducer is always defined.
 const store = createStore(reducer);
 store.subscribe(render);
 render();

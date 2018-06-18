@@ -11,9 +11,7 @@ type PropsType = {
   dispatch: DispatchType
 };
 
-class Delta extends Component {
-  props: PropsType;
-
+class Delta extends Component<PropsType> {
   //onDeltaChange = (e: SyntheticInputEvent) =>
   onDeltaChange = e =>
     this.props.dispatch({

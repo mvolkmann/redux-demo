@@ -12,9 +12,7 @@ type PropsType = {
   dispatch: DispatchType
 };
 
-class Counter extends Component {
-  props: PropsType;
-
+class Counter extends Component<PropsType> {
   onDecrement = () => this.props.dispatch({type: 'decrement'});
   onIncrement = () => this.props.dispatch({type: 'increment'});
 

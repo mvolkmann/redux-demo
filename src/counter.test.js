@@ -4,10 +4,13 @@ import React from 'react';
 import Counter from './counter';
 import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
-import {mount} from 'enzyme';
+import Enzyme, {mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 
 import './types';
+
+Enzyme.configure({adapter: new Adapter()});
 
 /**
  * These tests just verify that when the user
