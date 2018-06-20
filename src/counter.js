@@ -7,7 +7,8 @@ import Delta from './delta';
 import './counter.css';
 
 type PropsType = {
-  counter: number
+  counter: number,
+  delta: number
 };
 
 class Counter extends Component<PropsType> {
