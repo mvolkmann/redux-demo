@@ -1,23 +1,17 @@
 // @flow
 
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import type {DispatchType, StateType} from './types';
+import {dispatchSet, watch} from 'redux-easy';
 
 import './delta.css';
 
 type PropsType = {
-  delta: number,
-  dispatch: DispatchType
+  delta: number
 };
 
 class Delta extends Component<PropsType> {
   //onDeltaChange = (e: SyntheticInputEvent) =>
-  onDeltaChange = e =>
-    this.props.dispatch({
-      type: 'deltaChange',
-      payload: Number(e.target.value)
-    });
+  onDeltaChange = e => dispatchSet('delta', Number(e.target.value));
 
   render() {
     return (
@@ -33,5 +27,4 @@ class Delta extends Component<PropsType> {
   }
 }
 
-const mapState = ({delta}: StateType) => ({delta});
-export default connect(mapState)(Delta);
+export default watch(Delta, {delta: ''});

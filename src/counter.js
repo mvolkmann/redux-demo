@@ -1,20 +1,18 @@
 // @flow
 
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import {dispatchTransform, watch} from 'redux-easy';
 import Delta from './delta';
-import type {DispatchType, StateType} from './types';
 
 import './counter.css';
 
 type PropsType = {
-  counter: number,
-  dispatch: DispatchType
+  counter: number
 };
 
 class Counter extends Component<PropsType> {
-  onDecrement = () => this.props.dispatch({type: 'decrement'});
-  onIncrement = () => this.props.dispatch({type: 'increment'});
+  onDecrement = () => dispatchTransform('counter', c => c - this.props.delta);
+  onIncrement = () => dispatchTransform('counter', c => c + this.props.delta);
 
   render() {
     const {counter} = this.props;
@@ -35,5 +33,4 @@ class Counter extends Component<PropsType> {
   }
 }
 
-const mapState = ({counter}: StateType) => ({counter});
-export default connect(mapState)(Counter);
+export default watch(Counter, {counter: '', delta: ''});
