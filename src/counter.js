@@ -2,13 +2,14 @@
 
 import React, {Component} from 'react';
 import Delta from './delta';
+import type {DispatchType} from './types';
 //import MyContext from './context';
 
 import './counter.css';
 
 type PropsType = {
   counter: number,
-  dispatch: Function
+  dispatch: DispatchType
 };
 
 class Counter extends Component<PropsType> {
